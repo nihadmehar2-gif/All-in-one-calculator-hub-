@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  EveryCalc — generated sitemap.
+
+  Because the platform is a hash-based SPA (only `/` is exposed by the
+  sandbox), this sitemap advertises the homepage plus the canonical category
+  and calculator paths. When calculators are migrated to real Next.js routes
+  in a future part, those URLs can be added directly here.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://everycalc.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://everycalc.app/#/directory</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

@@ -1,0 +1,75 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const SITE_URL = "https://everycalc.app";
+const SITE_DESCRIPTION =
+  "EveryCalc is a free, open calculator platform. 100% client-side math across 32 categories — finance, health, math, science, conversions and more. No tracking, no signups.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "EveryCalc — Every calculator in one place",
+    template: "%s — EveryCalc",
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "calculator", "calculators", "free calculator", "online calculator",
+    "finance calculator", "loan calculator", "BMI", "unit converter",
+    "math calculator", "percentage calculator", "compound interest",
+    "statistics calculator", "geometry calculator", "EveryCalc",
+  ],
+  authors: [{ name: "EveryCalc" }],
+  applicationName: "EveryCalc",
+  icons: {
+    icon: "/logo.svg",
+  },
+  openGraph: {
+    title: "EveryCalc — Every calculator in one place",
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "EveryCalc",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EveryCalc",
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+      >
+        <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          <Toaster />
+        </NextThemesProvider>
+      </body>
+    </html>
+  );
+}

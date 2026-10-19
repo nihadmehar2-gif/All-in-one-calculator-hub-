@@ -18,7 +18,7 @@ export function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                 <Calculator className="h-4 w-4" />
               </span>
-              <span className="font-semibold">EveryCalc</span>
+              <span className="font-bold text-lg" style={{ fontFamily: "var(--font-display), serif" }}>EveryCalc</span>
             </div>
             <p className="text-sm text-muted-foreground">
               A free, open calculator platform. {liveCount} calculators live today,

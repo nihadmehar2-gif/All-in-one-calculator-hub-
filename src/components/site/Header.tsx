@@ -73,7 +73,7 @@ export function Header() {
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Calculator className="h-5 w-5" />
           </span>
-          <span className="hidden font-semibold text-base tracking-tight sm:inline">
+          <span className="hidden font-bold text-lg tracking-tight sm:inline" style={{ fontFamily: "var(--font-display), serif" }}>
             EveryCalc
           </span>
         </button>

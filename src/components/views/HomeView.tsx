@@ -37,8 +37,8 @@ export function HomeView() {
           <Sparkles className="h-3 w-3" />
           {liveCount} live calculators across {totalCategoriesWithCalc} categories
         </Badge>
-        <h1 className="text-3xl sm:text-5xl font-bold tracking-tight max-w-3xl mx-auto">
-          Every calculator you need, in one place.
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight max-w-3xl mx-auto" style={{ fontFamily: "var(--font-display), serif", letterSpacing: "-0.04em", lineHeight: 1.02 }}>
+          Every calculator you need, <span className="italic font-medium text-primary">in one place.</span>
         </h1>
         <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
           Free, fast, private. All math runs locally in your browser — no signups,

@@ -16,10 +16,10 @@ const emphasisClasses: Record<NonNullable<ResultRowType["emphasis"]>, string> = 
 };
 
 const valueClasses: Record<NonNullable<ResultRowType["emphasis"]>, string> = {
-  primary: "text-primary text-2xl font-semibold",
+  primary: "text-primary text-3xl font-semibold result-value",
   normal: "text-foreground text-base font-medium",
   warning: "text-amber-700 dark:text-amber-300 text-base font-medium",
-  success: "text-emerald-700 dark:text-emerald-300 text-base font-medium",
+  success: "text-emerald-700 dark:text-emerald-300 text-2xl font-semibold result-value",
 };
 
 export function ResultRow({ row, compact }: Props) {

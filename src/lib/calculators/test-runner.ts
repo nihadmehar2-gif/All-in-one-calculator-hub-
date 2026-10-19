@@ -50,8 +50,13 @@ function runOneTest(calc: { slug: string; calculate: (i: Record<string, unknown>
     return { passed: ok, message: ok ? "" : `expected "${t.expected}", got "${actual}"` };
   }
   // Object: check each keyed row
+  // Search both top-level rows and section rows for the key.
+  const allRows = [
+    ...result.rows,
+    ...(result.sections ?? []).flatMap((s) => s.rows),
+  ];
   for (const [key, expectedValue] of Object.entries(t.expected)) {
-    const row = result.rows.find((r) => r.key === key);
+    const row = allRows.find((r) => r.key === key);
     if (!row) return { passed: false, message: `Row "${key}" not found` };
     if (!compareValues(row.value, expectedValue, t.tolerance)) {
       return { passed: false, message: `Row "${key}": expected "${expectedValue}", got "${row.value}"` };

@@ -48,9 +48,18 @@ import {
 } from "./impl/finance";
 import {
   bmiCalculator,
+  bmrCalculator,
+  bodyFatCalculator,
+  idealWeight,
+  heartRateZones,
+  hydration,
+  pregnancyDueDate,
+  sleepSchedule,
+  macroCalculator,
+  paceSpeedDistance,
 } from "./impl/health";
-import { lengthConverter, temperatureConverter } from "./impl/conversions";
-import { dateDifference } from "./impl/date-time";
+import { lengthConverter, temperatureConverter, massConverter, speedConverter, volumeConverter, pressureConverter, areaConverter, energyConverter } from "./impl/conversions";
+import { dateDifference, ageCalculator, workdayCounter, timezoneConverter } from "./impl/date-time";
 import {
   medianMode,
   standardDeviation,
@@ -80,7 +89,48 @@ import {
   permutationsCombinations,
 } from "./impl/algebra";
 import { numericalDerivative, definiteIntegral } from "./impl/calculus";
-import { ohmsLaw } from "./impl/science";
+import {
+  ohmsLaw,
+  kinematics,
+  newtonsSecond,
+  workEnergyPower,
+  momentumEnergy,
+  densityPressure,
+  thermalExpansion,
+  waveFrequency,
+  electricalEnergy,
+  seriesParallelResistance,
+  gasLaws,
+} from "./impl/science";
+import { molarMass, molarity, dilution } from "./impl/chemistry";
+import {
+  resistorColorCode,
+  voltageDivider,
+  rcTimeConstant,
+  batteryRuntime,
+  gearRatio,
+  ledResistor,
+} from "./impl/engineering";
+import {
+  concreteVolume,
+  brickMortar,
+  paintCoverage,
+  flooringTile,
+  wallAreaRoom,
+  roofingSlope,
+  lumberSheet,
+  soilGravelMulch,
+  hvacLoad,
+  solarPanel,
+} from "./impl/construction";
+import { fuelEconomy, tripCost, vehicleRunningCosts } from "./impl/automotive";
+import { recipeScaler, foodServingConversion } from "./impl/cooking";
+import { plantSpacing, fertilizerCalculator } from "./impl/agriculture";
+import { electricityBill, carbonFootprint } from "./impl/environment";
+import { discountCalculator, unitPrice, tipCalculator } from "./impl/shopping";
+import { sportsAverage, runningPace } from "./impl/sports";
+import { dogAge, petCalorie } from "./impl/pets";
+import { volumetricWeight, packageVolume } from "./impl/logistics";
 import {
   gpaCalculator,
   cgpaCalculator,
@@ -166,13 +216,31 @@ export const LIVE_CALCULATORS: CalculatorDefinition[] = [
   bondYield,
   autoLoan,
   refinance,
-  // health (Part 1)
+  // health (Part 1 + Part 4)
   bmiCalculator,
-  // conversions (Part 1)
+  bmrCalculator,
+  bodyFatCalculator,
+  idealWeight,
+  heartRateZones,
+  hydration,
+  pregnancyDueDate,
+  sleepSchedule,
+  macroCalculator,
+  paceSpeedDistance,
+  // conversions (Part 1 + Part 4)
   lengthConverter,
   temperatureConverter,
-  // date-time (Part 1)
+  massConverter,
+  speedConverter,
+  volumeConverter,
+  pressureConverter,
+  areaConverter,
+  energyConverter,
+  // date-time (Part 1 + Part 4)
   dateDifference,
+  ageCalculator,
+  workdayCounter,
+  timezoneConverter,
   // statistics (Part 1 + Part 2)
   medianMode,
   standardDeviation,
@@ -201,8 +269,66 @@ export const LIVE_CALCULATORS: CalculatorDefinition[] = [
   // calculus (Part 2)
   numericalDerivative,
   definiteIntegral,
-  // science (Part 1)
+  // science (Part 1 + Part 4)
   ohmsLaw,
+  kinematics,
+  newtonsSecond,
+  workEnergyPower,
+  momentumEnergy,
+  densityPressure,
+  thermalExpansion,
+  waveFrequency,
+  electricalEnergy,
+  seriesParallelResistance,
+  gasLaws,
+  // chemistry (Part 4)
+  molarMass,
+  molarity,
+  dilution,
+  // engineering (Part 4)
+  resistorColorCode,
+  voltageDivider,
+  rcTimeConstant,
+  batteryRuntime,
+  gearRatio,
+  ledResistor,
+  // construction (Part 4)
+  concreteVolume,
+  brickMortar,
+  paintCoverage,
+  flooringTile,
+  wallAreaRoom,
+  roofingSlope,
+  lumberSheet,
+  soilGravelMulch,
+  hvacLoad,
+  solarPanel,
+  // automotive (Part 4)
+  fuelEconomy,
+  tripCost,
+  vehicleRunningCosts,
+  // cooking (Part 4)
+  recipeScaler,
+  foodServingConversion,
+  // agriculture (Part 4)
+  plantSpacing,
+  fertilizerCalculator,
+  // environment (Part 4)
+  electricityBill,
+  carbonFootprint,
+  // shopping (Part 4)
+  discountCalculator,
+  unitPrice,
+  tipCalculator,
+  // sports (Part 4)
+  sportsAverage,
+  runningPace,
+  // pets (Part 4)
+  dogAge,
+  petCalorie,
+  // logistics (Part 4)
+  volumetricWeight,
+  packageVolume,
   // education (Part 1 + Part 2)
   gpaCalculator,
   cgpaCalculator,

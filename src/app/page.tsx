@@ -16,6 +16,9 @@ import { NotFoundView } from "@/components/views/NotFoundView";
 import { getCategory } from "@/lib/calculators/categories";
 import { getCalculator, getLiveCalculators } from "@/lib/calculators/registry";
 
+// NOTE: This is the intended production domain. Before deploying, verify that
+// everycalc.app is actually registered and pointing to this deployment.
+// If deploying to a different domain, update this constant.
 const SITE_URL = "https://everycalc.app";
 
 /**
@@ -36,7 +39,7 @@ export default function Home() {
 
   useEffect(() => {
     let title = "EveryCalc — Every calculator in one place";
-    let description = "EveryCalc is a free, open calculator platform with 150+ tools across 32 categories. All math runs locally in your browser — no tracking, no signups.";
+    let description = "EveryCalc is a free, open calculator platform with 200+ tools across 31 categories. All math runs locally in your browser — no tracking, no signups.";
     let canonicalPath = "/";
     let jsonLdType: "website" | "calculator" | "webpage" | null = "website";
 

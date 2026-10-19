@@ -64,7 +64,6 @@ export function Footer() {
               <li><a href={route.privacy()} className="text-muted-foreground hover:text-primary transition-colors">Privacy policy</a></li>
               <li className="text-muted-foreground">100% client-side math</li>
               <li className="text-muted-foreground">No tracking, no ads</li>
-              <li className="text-muted-foreground">Works offline</li>
             </ul>
           </div>
         </div>

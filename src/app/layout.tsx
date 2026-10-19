@@ -38,7 +38,7 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = "https://everycalc.app";
 const SITE_DESCRIPTION =
-  "EveryCalc is a free, open calculator platform. 100% client-side math across 32 categories — finance, health, math, science, conversions and more. No tracking, no signups.";
+  "EveryCalc is a free, open calculator platform. 100% client-side math across 31 categories — finance, health, math, science, conversions and more. No tracking, no signups.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

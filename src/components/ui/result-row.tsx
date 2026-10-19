@@ -9,10 +9,10 @@ interface Props {
 }
 
 const emphasisClasses: Record<NonNullable<ResultRowType["emphasis"]>, string> = {
-  primary: "border-primary/40 bg-primary/5",
-  normal: "border-border",
-  warning: "border-amber-500/40 bg-amber-50 dark:bg-amber-950/20",
-  success: "border-emerald-500/40 bg-emerald-50 dark:bg-emerald-950/20",
+  primary: "border-primary/25 bg-primary/5",
+  normal: "border-border/60",
+  warning: "border-amber-500/30 bg-amber-50 dark:bg-amber-950/20",
+  success: "border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/20",
 };
 
 const valueClasses: Record<NonNullable<ResultRowType["emphasis"]>, string> = {
@@ -26,17 +26,17 @@ export function ResultRow({ row, compact }: Props) {
   const emphasis = row.emphasis ?? "normal";
   if (compact || emphasis === "normal") {
     return (
-      <div className="flex items-baseline justify-between gap-3 py-1 border-b last:border-0">
+      <div className="flex items-baseline justify-between gap-3 py-1.5 border-b border-border/40 last:border-0">
         <span className="text-sm text-muted-foreground">{row.label}</span>
         <span className="text-sm font-medium tabular-nums text-right">{row.value}</span>
       </div>
     );
   }
   return (
-    <div className={cn("rounded-md border p-4", emphasisClasses[emphasis])}>
-      <div className="text-xs text-muted-foreground uppercase tracking-wider">{row.label}</div>
-      <div className={cn("mt-1 tabular-nums", valueClasses[emphasis])}>{row.value}</div>
-      {row.hint && <div className="mt-1 text-xs text-muted-foreground">{row.hint}</div>}
+    <div className={cn("rounded-xl border p-4", emphasisClasses[emphasis])}>
+      <div className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{row.label}</div>
+      <div className={cn("mt-1.5 tabular-nums", valueClasses[emphasis])}>{row.value}</div>
+      {row.hint && <div className="mt-1.5 text-xs text-muted-foreground">{row.hint}</div>}
     </div>
   );
 }

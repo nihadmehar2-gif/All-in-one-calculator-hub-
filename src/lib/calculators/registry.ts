@@ -184,6 +184,99 @@ import {
   constructionBudget,
   realEstateMortgageAffordability,
 } from "./impl/real-estate";
+// Part 5 specialist calculators
+import {
+  linearRegression,
+  poissonDistribution,
+  hypergeometric,
+  chiSquareTest,
+  correlationCoefficient,
+  tScore,
+  anovaOneWay,
+  coefficientOfVariation,
+} from "./impl/specialist-statistics";
+import {
+  orbitalPeriod,
+  lightTime,
+  stellarDistance,
+  escapeVelocity,
+  stellarMagnitude,
+} from "./impl/astronomy";
+import {
+  oeeCalculator,
+  cycleTime,
+  throughput,
+  materialYield,
+} from "./impl/manufacturing";
+import {
+  hourlyRate,
+  pomodoroPlanner,
+  timeTracking,
+  invoiceTotal,
+  meetingCost,
+} from "./impl/productivity";
+import {
+  conversionRate,
+  customerLifetimeValue,
+  churnRate,
+  marketingROI,
+  emailMetrics,
+} from "./impl/marketing";
+import {
+  bakersPercentage,
+  cookingTime,
+  sweetenerConversion,
+} from "./impl/cooking-advanced";
+import {
+  irrigationCalculator,
+  cropYield,
+  compostRatio,
+} from "./impl/agriculture-advanced";
+import {
+  waterFootprint,
+  treeCarbonOffset,
+  evFuelSavings,
+} from "./impl/environment-advanced";
+import {
+  propertyTax,
+  hoaImpact,
+  capRate,
+  exchange1031,
+} from "./impl/real-estate-advanced";
+import {
+  containerPacking,
+  etaCalculator,
+  freightClass,
+} from "./impl/logistics-advanced";
+import {
+  beamLoad,
+  pipeFlow,
+  voltageDrop,
+  pumpPower,
+} from "./impl/engineering-advanced";
+import {
+  circularSector,
+  ellipseArea,
+  sphericalCap,
+  tetrahedron,
+  miterAngle,
+} from "./impl/geometry-advanced";
+import {
+  oddsConverter,
+  golfHandicap,
+  bettingExpectedValue,
+  diceProbability,
+  winStreakProbability,
+} from "./impl/gaming";
+import {
+  ovulation,
+  childGrowthPercentile,
+  conceptionDueDate,
+} from "./impl/parenting";
+import {
+  payrollCalculator,
+  bonusTax,
+} from "./impl/payroll";
 import { PLANNED_CALCULATORS } from "./impl/_planned";
 
 export const LIVE_CALCULATORS: CalculatorDefinition[] = [
@@ -376,6 +469,82 @@ export const LIVE_CALCULATORS: CalculatorDefinition[] = [
   ltvRatio,
   constructionBudget,
   realEstateMortgageAffordability,
+  // Part 5 specialist statistics
+  linearRegression,
+  poissonDistribution,
+  hypergeometric,
+  chiSquareTest,
+  correlationCoefficient,
+  tScore,
+  anovaOneWay,
+  coefficientOfVariation,
+  // Part 5 astronomy
+  orbitalPeriod,
+  lightTime,
+  stellarDistance,
+  escapeVelocity,
+  stellarMagnitude,
+  // Part 5 manufacturing
+  oeeCalculator,
+  cycleTime,
+  throughput,
+  materialYield,
+  // Part 5 productivity + payroll
+  hourlyRate,
+  pomodoroPlanner,
+  timeTracking,
+  invoiceTotal,
+  meetingCost,
+  payrollCalculator,
+  bonusTax,
+  // Part 5 marketing
+  conversionRate,
+  customerLifetimeValue,
+  churnRate,
+  marketingROI,
+  emailMetrics,
+  // Part 5 advanced cooking
+  bakersPercentage,
+  cookingTime,
+  sweetenerConversion,
+  // Part 5 advanced agriculture
+  irrigationCalculator,
+  cropYield,
+  compostRatio,
+  // Part 5 advanced environment
+  waterFootprint,
+  treeCarbonOffset,
+  evFuelSavings,
+  // Part 5 advanced real estate
+  propertyTax,
+  hoaImpact,
+  capRate,
+  exchange1031,
+  // Part 5 advanced logistics
+  containerPacking,
+  etaCalculator,
+  freightClass,
+  // Part 5 advanced engineering
+  beamLoad,
+  pipeFlow,
+  voltageDrop,
+  pumpPower,
+  // Part 5 advanced geometry
+  circularSector,
+  ellipseArea,
+  sphericalCap,
+  tetrahedron,
+  miterAngle,
+  // Part 5 gaming/sports
+  oddsConverter,
+  golfHandicap,
+  bettingExpectedValue,
+  diceProbability,
+  winStreakProbability,
+  // Part 5 parenting
+  ovulation,
+  childGrowthPercentile,
+  conceptionDueDate,
 ];
 
 export const ALL_CALCULATORS: CalculatorDefinition[] = [

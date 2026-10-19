@@ -15,6 +15,8 @@ import { useEffect, useState, useCallback } from "react";
  *   #/category/:id              — a single category page
  *   #/calculator/:slug          — a single calculator
  *   #/search?q=foo              — search results
+ *   #/request                   — calculator request form
+ *   #/privacy                   — privacy policy
  */
 
 export interface ParsedRoute {
@@ -70,4 +72,6 @@ export const route = {
   category: (id: string) => `#/category/${id}`,
   calculator: (slug: string) => `#/calculator/${slug}`,
   search: (q: string) => `#/search?q=${encodeURIComponent(q)}`,
+  request: () => "#/request",
+  privacy: () => "#/privacy",
 };

@@ -62,12 +62,11 @@ export function Footer() {
               About
             </h3>
             <ul className="space-y-2 text-sm">
+              <li><a href={route.request()} className="text-muted-foreground hover:text-foreground">Request a calculator</a></li>
+              <li><a href={route.privacy()} className="text-muted-foreground hover:text-foreground">Privacy policy</a></li>
               <li className="text-muted-foreground">100% client-side math</li>
               <li className="text-muted-foreground">No tracking, no ads</li>
               <li className="text-muted-foreground">Works offline</li>
-              <li className="flex items-center gap-1 text-muted-foreground">
-                Built with <Heart className="h-3 w-3" /> on Next.js
-              </li>
             </ul>
           </div>
         </div>

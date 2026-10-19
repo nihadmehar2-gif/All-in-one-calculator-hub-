@@ -28,7 +28,7 @@ export function RequestView() {
   const [submitted, setSubmitted] = useState(false);
 
   const liveCount = getLiveCalculators().length;
-  const requestEmail = "calc-requests@everycalc.app";
+  const requestEmail = "calc-requests@nihad-calculator.vercel.app";
   const mailtoSubject = title ? `Calculator request: ${title}` : "Calculator request";
   const mailtoBody = `Title: ${title}
 
@@ -40,7 +40,7 @@ ${description}
 ${email ? `Reply-to: ${email}` : ""}
 
 ---
-Sent from EveryCalc's request form (https://everycalc.app/#/request)`;
+Sent from EveryCalc's request form (https://nihad-calculator.vercel.app/#/request)`;
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

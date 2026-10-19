@@ -166,7 +166,7 @@ export function PrivacyView() {
 
       <p className="text-xs text-muted-foreground text-center pt-4">
         Questions about privacy? Email{" "}
-        <a href="mailto:privacy@everycalc.app" className="underline">privacy@everycalc.app</a>.
+        <a href="mailto:privacy@nihad-calculator.vercel.app" className="underline">privacy@nihad-calculator.vercel.app</a>.
       </p>
     </div>
   );

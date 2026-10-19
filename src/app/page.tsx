@@ -16,10 +16,8 @@ import { NotFoundView } from "@/components/views/NotFoundView";
 import { getCategory } from "@/lib/calculators/categories";
 import { getCalculator, getLiveCalculators } from "@/lib/calculators/registry";
 
-// NOTE: This is the intended production domain. Before deploying, verify that
-// everycalc.app is actually registered and pointing to this deployment.
-// If deploying to a different domain, update this constant.
-const SITE_URL = "https://everycalc.app";
+// Production domain — update this if deploying to a different URL.
+const SITE_URL = "https://nihad-calculator.vercel.app";
 
 /**
  * EveryCalc SPA shell.

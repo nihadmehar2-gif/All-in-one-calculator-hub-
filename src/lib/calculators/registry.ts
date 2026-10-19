@@ -28,8 +28,27 @@ import {
   scientificNotation,
   scientificCalculator,
 } from "./impl/basic-math";
-import { loanPayment, compoundInterest } from "./impl/finance";
-import { bmiCalculator } from "./impl/health";
+import {
+  loanPayment,
+  compoundInterest,
+  simpleInterest,
+  mortgageAffordability,
+  savingsGoal,
+  presentValue,
+  futureValue,
+  ruleOf72,
+  inflation,
+  retirement,
+  creditCardPayoff,
+  debtSnowballAvalanche,
+  aprEar,
+  bondYield,
+  autoLoan,
+  refinance,
+} from "./impl/finance";
+import {
+  bmiCalculator,
+} from "./impl/health";
 import { lengthConverter, temperatureConverter } from "./impl/conversions";
 import { dateDifference } from "./impl/date-time";
 import {
@@ -86,6 +105,35 @@ import {
   aspectRatio,
   imageFileSize,
 } from "./impl/data-networking";
+import {
+  wageConversion,
+  overtime,
+  salesTaxVatGst,
+  incomeTaxUS2024,
+  salaryTakeHome,
+  capitalGains,
+  zakat,
+} from "./impl/taxes";
+import {
+  marginMarkup,
+  breakeven,
+  roiPayback,
+  depreciation,
+  inventoryTurnover,
+  cashFlow,
+  discountCommission,
+  unitEconomics,
+} from "./impl/business";
+import {
+  rentVsBuy,
+  downPaymentClosing,
+  rentalYield,
+  propertyAppreciation,
+  pricePerSqft,
+  ltvRatio,
+  constructionBudget,
+  realEstateMortgageAffordability,
+} from "./impl/real-estate";
 import { PLANNED_CALCULATORS } from "./impl/_planned";
 
 export const LIVE_CALCULATORS: CalculatorDefinition[] = [
@@ -101,9 +149,23 @@ export const LIVE_CALCULATORS: CalculatorDefinition[] = [
   exponentsRootsLogs,
   scientificNotation,
   scientificCalculator,
-  // finance (Part 1)
+  // finance (Part 1 + Part 3)
   loanPayment,
   compoundInterest,
+  simpleInterest,
+  mortgageAffordability,
+  savingsGoal,
+  presentValue,
+  futureValue,
+  ruleOf72,
+  inflation,
+  retirement,
+  creditCardPayoff,
+  debtSnowballAvalanche,
+  aprEar,
+  bondYield,
+  autoLoan,
+  refinance,
   // health (Part 1)
   bmiCalculator,
   // conversions (Part 1)
@@ -162,6 +224,32 @@ export const LIVE_CALCULATORS: CalculatorDefinition[] = [
   screenResolution,
   aspectRatio,
   imageFileSize,
+  // taxes (Part 3)
+  wageConversion,
+  overtime,
+  salesTaxVatGst,
+  incomeTaxUS2024,
+  salaryTakeHome,
+  capitalGains,
+  zakat,
+  // business (Part 3)
+  marginMarkup,
+  breakeven,
+  roiPayback,
+  depreciation,
+  inventoryTurnover,
+  cashFlow,
+  discountCommission,
+  unitEconomics,
+  // real-estate (Part 3)
+  rentVsBuy,
+  downPaymentClosing,
+  rentalYield,
+  propertyAppreciation,
+  pricePerSqft,
+  ltvRatio,
+  constructionBudget,
+  realEstateMortgageAffordability,
 ];
 
 export const ALL_CALCULATORS: CalculatorDefinition[] = [

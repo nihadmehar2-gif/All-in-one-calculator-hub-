@@ -41,20 +41,10 @@ export const PLANNED_CALCULATORS: CalculatorDefinition[] = [
   /* statistics */
 
   /* finance */
-  plan({ slug: "mortgage-affordability", name: "Mortgage Affordability", description: "How much house can you afford on your income?", category: "finance", keywords: ["mortgage", "afford"], inputs: [], part: 2 }),
-  plan({ slug: "savings-goal", name: "Savings Goal Calculator", description: "How much to save monthly to reach a goal.", category: "finance", keywords: ["savings", "goal"], inputs: [], part: 2 }),
-  plan({ slug: "present-value", name: "Present Value of an Annuity", description: "Today's value of a stream of future payments.", category: "finance", keywords: ["pv", "annuity"], inputs: [], part: 3 }),
-  plan({ slug: "rule-of-72", name: "Rule of 72", description: "Years to double money at a given rate.", category: "finance", keywords: ["double", "rule 72"], inputs: [], part: 2 }),
 
   /* taxes */
-  plan({ slug: "income-tax", name: "Income Tax Estimator", description: "Federal income tax estimate (US brackets).", category: "taxes", keywords: ["tax", "income"], inputs: [], part: 3 }),
-  plan({ slug: "take-home-pay", name: "Take-Home Pay", description: "Net pay after tax, SS, Medicare.", category: "taxes", keywords: ["salary", "net"], inputs: [], part: 3 }),
-  plan({ slug: "sales-tax", name: "Sales Tax Calculator", description: "Add or remove sales tax from a price.", category: "taxes", keywords: ["sales tax"], inputs: [], part: 2 }),
 
   /* business */
-  plan({ slug: "margin-markup", name: "Margin & Markup", description: "Convert between gross margin and markup.", category: "business", keywords: ["margin", "markup"], inputs: [], part: 2 }),
-  plan({ slug: "breakeven", name: "Break-Even Analysis", description: "Units needed to cover fixed costs.", category: "business", keywords: ["breakeven"], inputs: [], part: 2 }),
-  plan({ slug: "depreciation-straight-line", name: "Straight-Line Depreciation", description: "Annual depreciation of an asset.", category: "business", keywords: ["depreciation"], inputs: [], part: 3 }),
 
   /* health */
   plan({ slug: "bmr", name: "BMR Calculator", description: "Basal metabolic rate (Mifflin-St Jeor).", category: "health", keywords: ["bmr", "metabolism"], inputs: [], part: 2 }),
@@ -117,8 +107,6 @@ export const PLANNED_CALCULATORS: CalculatorDefinition[] = [
   plan({ slug: "electricity-bill", name: "Electricity Bill Estimator", description: "kWh × rate × appliances.", category: "environment", keywords: ["electricity"], inputs: [], part: 4 }),
 
   /* real-estate */
-  plan({ slug: "rent-vs-buy", name: "Rent vs Buy", description: "Break-even horizon for ownership.", category: "real-estate", keywords: ["rent", "buy"], inputs: [], part: 5 }),
-  plan({ slug: "cap-rate", name: "Cap Rate", description: "Real-estate capitalization rate.", category: "real-estate", keywords: ["cap rate"], inputs: [], part: 5 }),
 
   /* shopping */
   plan({ slug: "discount-calculator", name: "Discount Calculator", description: "Final price after percent-off.", category: "shopping", keywords: ["discount"], inputs: [], part: 2 }),

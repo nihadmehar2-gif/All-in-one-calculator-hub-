@@ -84,6 +84,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="ZD9SdIXWF3yJhDc3HSp5Ti6QufX1rrttnUxM6AFeVSY" />
+      </head>
       <body
         className={`${fraunces.variable} ${sora.variable} ${jakarta.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >

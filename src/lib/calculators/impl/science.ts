@@ -16,7 +16,7 @@ export const ohmsLaw: CalculatorDefinition = {
   inputs: [
     { name: "voltage", label: "Voltage (V)", type: "number", default: 12, step: "any", unit: "V", help: "Leave blank to solve." },
     { name: "current", label: "Current (I)", type: "number", default: 2, step: "any", unit: "A", help: "Leave blank to solve." },
-    { name: "resistance", label: "Resistance (R)", type: "number", default: 0, step: "any", unit: "Ω", help: "Leave blank to solve." },
+    { name: "resistance", label: "Resistance (R)", type: "number", default: "" as unknown as number, step: "any", unit: "Ω", help: "Leave blank to solve." },
   ],
   related: ["power-calculator", "resistor-color-code"],
   calculate: (raw) => {

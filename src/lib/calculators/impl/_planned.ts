@@ -30,28 +30,15 @@ const plan = (p: Plan): CalculatorDefinition => ({
 
 export const PLANNED_CALCULATORS: CalculatorDefinition[] = [
   /* basic-math */
-  plan({ slug: "percentage-change", name: "Percentage Change Calculator", description: "Percent increase or decrease between two values.", category: "basic-math", keywords: ["change", "growth", "increase"], inputs: [], part: 2 }),
-  plan({ slug: "decimal-to-fraction", name: "Decimal to Fraction", description: "Convert any decimal to a simplified fraction.", category: "basic-math", keywords: ["decimal", "fraction"], inputs: [], part: 2 }),
-  plan({ slug: "ratio-simplifier", name: "Ratio Simplifier", description: "Simplify ratios to their lowest terms.", category: "basic-math", keywords: ["ratio"], inputs: [], part: 2 }),
 
   /* algebra */
-  plan({ slug: "linear-equation-solver", name: "Linear Equation Solver", description: "Solve ax + b = c for x.", category: "algebra", keywords: ["linear", "equation"], inputs: [], part: 2 }),
-  plan({ slug: "quadratic-solver", name: "Quadratic Equation Solver", description: "Find real and complex roots of ax² + bx + c = 0.", category: "algebra", keywords: ["quadratic", "roots"], inputs: [], part: 2 }),
   plan({ slug: "system-of-equations", name: "System of Linear Equations", description: "2x2 and 3x3 systems by substitution / Cramer's rule.", category: "algebra", keywords: ["system", "cramer"], inputs: [], part: 3 }),
 
   /* geometry */
-  plan({ slug: "right-triangle", name: "Right Triangle Solver", description: "Pythagorean theorem and missing sides/angles.", category: "geometry", keywords: ["pythagoras", "right angle"], inputs: [], part: 2 }),
-  plan({ slug: "sphere-volume", name: "Sphere Volume & Surface", description: "Volume and surface area of a sphere from radius.", category: "geometry", keywords: ["sphere", "ball"], inputs: [], part: 2 }),
-  plan({ slug: "trig-identity", name: "Trigonometric Identity Evaluator", description: "Evaluate sin/cos/tan in degrees or radians.", category: "geometry", keywords: ["sin", "cos", "tan"], inputs: [], part: 3 }),
 
   /* calculus */
-  plan({ slug: "derivative", name: "Numerical Derivative", description: "Estimate derivative of a function at a point.", category: "calculus", keywords: ["derivative", "differentiation"], inputs: [], part: 3 }),
-  plan({ slug: "definite-integral", name: "Definite Integral (Simpson)", description: "Approximate ∫f(x)dx using Simpson's rule.", category: "calculus", keywords: ["integral", "area under curve"], inputs: [], part: 3 }),
 
   /* statistics */
-  plan({ slug: "permutations-combinations", name: "Permutations & Combinations", description: "nPr and nCr with factorials.", category: "statistics", keywords: ["npr", "ncr", "factorial"], inputs: [], part: 2 }),
-  plan({ slug: "binomial-probability", name: "Binomial Probability", description: "P(X=k) for binomial distribution.", category: "statistics", keywords: ["binomial", "probability"], inputs: [], part: 3 }),
-  plan({ slug: "normal-distribution", name: "Normal Distribution", description: "Z-scores and cumulative probabilities.", category: "statistics", keywords: ["normal", "z-score", "bell"], inputs: [], part: 3 }),
 
   /* finance */
   plan({ slug: "mortgage-affordability", name: "Mortgage Affordability", description: "How much house can you afford on your income?", category: "finance", keywords: ["mortgage", "afford"], inputs: [], part: 2 }),
@@ -86,7 +73,6 @@ export const PLANNED_CALCULATORS: CalculatorDefinition[] = [
   plan({ slug: "speed-converter", name: "Speed Converter", description: "m/s, km/h, mph, knot.", category: "conversions", keywords: ["speed"], inputs: [], part: 2 }),
   plan({ slug: "volume-converter", name: "Volume Converter", description: "ml, L, gal, cup, fl oz.", category: "conversions", keywords: ["volume"], inputs: [], part: 2 }),
   plan({ slug: "pressure-converter", name: "Pressure Converter", description: "Pa, bar, psi, atm, mmHg.", category: "conversions", keywords: ["pressure"], inputs: [], part: 3 }),
-  plan({ slug: "data-size-converter", name: "Data Size Converter", description: "Bit, byte, KB, MB, GB, TB (binary & decimal).", category: "conversions", keywords: ["data", "bytes"], inputs: [], part: 2 }),
 
   /* science */
   plan({ slug: "power-calculator", name: "Power Calculator", description: "Electrical and mechanical power.", category: "science", keywords: ["power", "watt"], inputs: [], part: 3 }),
@@ -109,17 +95,10 @@ export const PLANNED_CALCULATORS: CalculatorDefinition[] = [
   plan({ slug: "roof-area", name: "Roof Area Estimator", description: "Roof area from footprint and pitch.", category: "construction", keywords: ["roof"], inputs: [], part: 4 }),
 
   /* education */
-  plan({ slug: "grade-calculator", name: "Grade Calculator", description: "Weighted class grade from categories.", category: "education", keywords: ["grade"], inputs: [], part: 3 }),
-  plan({ slug: "test-score", name: "Test Score Calculator", description: "Percent and letter grade from raw points.", category: "education", keywords: ["test"], inputs: [], part: 3 }),
 
   /* computer-science */
-  plan({ slug: "number-base-converter", name: "Number Base Converter", description: "Binary / octal / decimal / hex.", category: "computer-science", keywords: ["binary", "hex"], inputs: [], part: 3 }),
-  plan({ slug: "bitwise-calculator", name: "Bitwise Calculator", description: "AND, OR, XOR, NOT, shifts.", category: "computer-science", keywords: ["bitwise"], inputs: [], part: 3 }),
-  plan({ slug: "color-converter", name: "Color Converter (HEX/RGB/HSL)", description: "Convert between color spaces.", category: "computer-science", keywords: ["color", "hex"], inputs: [], part: 3 }),
 
   /* data-networking */
-  plan({ slug: "subnet-calculator", name: "Subnet Calculator", description: "Network, broadcast, host range from CIDR.", category: "data-networking", keywords: ["subnet", "cidr"], inputs: [], part: 4 }),
-  plan({ slug: "bandwidth-calculator", name: "Bandwidth Calculator", description: "Time to transfer a file at a given rate.", category: "data-networking", keywords: ["bandwidth"], inputs: [], part: 4 }),
 
   /* automotive */
   plan({ slug: "fuel-economy", name: "Fuel Economy", description: "MPG, L/100km and trip cost.", category: "automotive", keywords: ["fuel", "mpg"], inputs: [], part: 4 }),

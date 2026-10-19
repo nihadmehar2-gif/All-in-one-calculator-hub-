@@ -3,7 +3,7 @@
  * =======================================
  *
  * Single source of truth for every calculator on the platform.
- * Add a new calculator by importing it and pushing to ALL_CALCULATORS —
+ * Add a new calculator by importing it and pushing to LIVE_CALCULATORS —
  * no UI or routing changes required.
  *
  * Public API:
@@ -15,33 +15,153 @@
  */
 
 import type { CalculatorDefinition } from "./types";
-import { percentageCalculator, averageCalculator, fractionToDecimal } from "./impl/basic-math";
+import {
+  percentageCalculator,
+  averageCalculator,
+  fractionToDecimal,
+  percentageChange,
+  reversePercentage,
+  decimalToFraction,
+  ratioSimplifier,
+  gcdLcmPrime,
+  exponentsRootsLogs,
+  scientificNotation,
+  scientificCalculator,
+} from "./impl/basic-math";
 import { loanPayment, compoundInterest } from "./impl/finance";
 import { bmiCalculator } from "./impl/health";
 import { lengthConverter, temperatureConverter } from "./impl/conversions";
 import { dateDifference } from "./impl/date-time";
-import { medianMode, standardDeviation } from "./impl/statistics";
-import { triangleArea, circleArea } from "./impl/geometry";
+import {
+  medianMode,
+  standardDeviation,
+  probabilityExpectedValue,
+  binomialProbability,
+  normalDistribution,
+  confidenceInterval,
+} from "./impl/statistics";
+import {
+  triangleArea,
+  circleArea,
+  rightTriangle,
+  pythagoreanTheorem,
+  sphereVolume,
+  cylinderVolume,
+  coneVolume,
+  cubeVolume,
+  regularPolygon,
+  coordinateGeometry,
+  trigEvaluator,
+} from "./impl/geometry";
+import {
+  linearEquationSolver,
+  quadraticSolver,
+  system2x2,
+  sequencesSeries,
+  permutationsCombinations,
+} from "./impl/algebra";
+import { numericalDerivative, definiteIntegral } from "./impl/calculus";
 import { ohmsLaw } from "./impl/science";
-import { gpaCalculator } from "./impl/education";
+import {
+  gpaCalculator,
+  cgpaCalculator,
+  marksPercentage,
+  weightedAverage,
+  finalExamScore,
+  weightedAssignments,
+  significantFigures,
+  readingTime,
+} from "./impl/education";
+import {
+  numberBaseConverter,
+  bitwiseCalculator,
+  colorConverter,
+} from "./impl/computer-science";
+import {
+  dataSizeConverter,
+  downloadTime,
+  bandwidthCalculator,
+  subnetCalculator,
+  screenResolution,
+  aspectRatio,
+  imageFileSize,
+} from "./impl/data-networking";
 import { PLANNED_CALCULATORS } from "./impl/_planned";
 
 export const LIVE_CALCULATORS: CalculatorDefinition[] = [
+  // basic-math (Part 1 + Part 2)
   percentageCalculator,
   averageCalculator,
   fractionToDecimal,
+  percentageChange,
+  reversePercentage,
+  decimalToFraction,
+  ratioSimplifier,
+  gcdLcmPrime,
+  exponentsRootsLogs,
+  scientificNotation,
+  scientificCalculator,
+  // finance (Part 1)
   loanPayment,
   compoundInterest,
+  // health (Part 1)
   bmiCalculator,
+  // conversions (Part 1)
   lengthConverter,
   temperatureConverter,
+  // date-time (Part 1)
   dateDifference,
+  // statistics (Part 1 + Part 2)
   medianMode,
   standardDeviation,
+  probabilityExpectedValue,
+  binomialProbability,
+  normalDistribution,
+  confidenceInterval,
+  // geometry (Part 1 + Part 2)
   triangleArea,
   circleArea,
+  rightTriangle,
+  pythagoreanTheorem,
+  sphereVolume,
+  cylinderVolume,
+  coneVolume,
+  cubeVolume,
+  regularPolygon,
+  coordinateGeometry,
+  trigEvaluator,
+  // algebra (Part 2)
+  linearEquationSolver,
+  quadraticSolver,
+  system2x2,
+  sequencesSeries,
+  permutationsCombinations,
+  // calculus (Part 2)
+  numericalDerivative,
+  definiteIntegral,
+  // science (Part 1)
   ohmsLaw,
+  // education (Part 1 + Part 2)
   gpaCalculator,
+  cgpaCalculator,
+  marksPercentage,
+  weightedAverage,
+  finalExamScore,
+  weightedAssignments,
+  significantFigures,
+  readingTime,
+  // computer-science (Part 2)
+  numberBaseConverter,
+  bitwiseCalculator,
+  colorConverter,
+  // data-networking (Part 2)
+  dataSizeConverter,
+  downloadTime,
+  bandwidthCalculator,
+  subnetCalculator,
+  screenResolution,
+  aspectRatio,
+  imageFileSize,
 ];
 
 export const ALL_CALCULATORS: CalculatorDefinition[] = [

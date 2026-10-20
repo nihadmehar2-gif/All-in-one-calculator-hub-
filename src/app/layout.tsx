@@ -37,7 +37,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const SITE_URL = "https://nihad-calculator.vercel.app";
+const SITE_URL = "https://everycalchub.vercel.app";
 const SITE_DESCRIPTION =
   "Every Calculator — your all-in-one calculator hub with 224 free online calculators across 31 categories. Finance, health, math, science, conversions and more. No tracking, no signups.";
 

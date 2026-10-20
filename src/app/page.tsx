@@ -17,7 +17,7 @@ import { getCategory } from "@/lib/calculators/categories";
 import { getCalculator, getLiveCalculators } from "@/lib/calculators/registry";
 
 // Production domain — update this if deploying to a different URL.
-const SITE_URL = "https://nihad-calculator.vercel.app";
+const SITE_URL = "https://everycalchub.vercel.app";
 
 /**
  * EveryCalc SPA shell.

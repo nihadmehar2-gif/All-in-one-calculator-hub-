@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://nihad-calculator.vercel.app";
+const SITE_URL = "https://everycalchub.vercel.app";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — EveryCalc",

@@ -5,7 +5,7 @@ import { getLiveCalculatorSlugs, getLiveCalculatorMeta } from "@/lib/calculators
 import { CATEGORIES_DATA, getCategoryData } from "@/lib/calculators/categories-data";
 import { calculatorNameToSeoSlug, buildSeoToRegistryMap, categoryUrlPath } from "@/lib/calculators/seo-urls";
 
-const SITE_URL = "https://nihad-calculator.vercel.app";
+const SITE_URL = "https://everycalchub.vercel.app";
 
 // Build reverse lookup: seoSlug → registrySlug
 const seoToRegistry = buildSeoToRegistryMap(

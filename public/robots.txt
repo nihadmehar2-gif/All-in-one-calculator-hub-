@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://nihad-calculator.vercel.app/sitemap.xml
+Sitemap: https://everycalchub.vercel.app/sitemap.xml

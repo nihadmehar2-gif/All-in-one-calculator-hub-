@@ -3,7 +3,7 @@ import { getLiveCalculatorSlugs, getLiveCalculatorMeta, getCategoryCountsData } 
 import { CATEGORIES_DATA } from "@/lib/calculators/categories-data";
 import { calculatorNameToSeoSlug, categoryUrlPath } from "@/lib/calculators/seo-urls";
 
-const SITE_URL = "https://nihad-calculator.vercel.app";
+const SITE_URL = "https://everycalchub.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

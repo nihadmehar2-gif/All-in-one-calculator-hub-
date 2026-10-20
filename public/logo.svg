@@ -1,29 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<defs>
-  <style type="text/css">
-    .st194{fill:#2D2D2D;stroke:#FFFFFF;stroke-width:0.6317;stroke-miterlimit:10;}
-    .st23{fill:#FFFFFF;}
-
-    .z-breathe {
-      animation: breathe 2.5s ease-in-out infinite;
-    }
-
-    @keyframes breathe {
-      0%, 100% { opacity: 0.7; }
-      50% { opacity: 1; }
-    }
-  </style>
-</defs>
-
-<g>
-  <path class="st194" d="M24.51,28.51H5.49c-2.21,0-4-1.79-4-4V5.49c0-2.21,1.79-4,4-4h19.03c2.21,0,4,1.79,4,4v19.03
-    C28.51,26.72,26.72,28.51,24.51,28.51z"/>
-  <g class="z-breathe">
-    <path class="st23" d="M15.47,7.1l-1.3,1.85c-0.2,0.29-0.54,0.47-0.9,0.47h-7.1V7.09C6.16,7.1,15.47,7.1,15.47,7.1z"/>
-    <polygon class="st23" points="24.3,7.1 13.14,22.91 5.7,22.91 16.86,7.1"/>
-    <path class="st23" d="M14.53,22.91l1.31-1.86c0.2-0.29,0.54-0.47,0.9-0.47h7.09v2.33H14.53z"/>
-  </g>
-</g>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Violet to blue gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <!-- White glow for icon -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Rounded square background with gradient -->
+  <rect x="32" y="32" width="448" height="448" rx="100" fill="url(#bgGrad)"/>
+  
+  <!-- Calculator body (white, rounded) -->
+  <rect x="146" y="110" width="220" height="292" rx="28" fill="white" opacity="0.98"/>
+  
+  <!-- Calculator screen (gradient bar) -->
+  <rect x="170" y="134" width="172" height="60" rx="12" fill="#1E1B4B"/>
+  <text x="328" y="174" font-family="monospace" font-size="28" font-weight="bold" fill="#A78BFA" text-anchor="end">123</text>
+  
+  <!-- Calculator buttons grid -->
+  <!-- Row 1 -->
+  <rect x="170" y="214" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="218" y="214" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="266" y="214" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="314" y="214" width="28" height="36" rx="8" fill="url(#bgGrad)"/>
+  
+  <!-- Row 2 -->
+  <rect x="170" y="262" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="218" y="262" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="266" y="262" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="314" y="262" width="28" height="36" rx="8" fill="url(#bgGrad)"/>
+  
+  <!-- Row 3 -->
+  <rect x="170" y="310" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="218" y="310" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="266" y="310" width="36" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="314" y="310" width="28" height="36" rx="8" fill="url(#bgGrad)"/>
+  
+  <!-- Row 4 (wide button) -->
+  <rect x="170" y="358" width="132" height="36" rx="8" fill="#E5E7EB"/>
+  <rect x="314" y="358" width="28" height="36" rx="8" fill="url(#bgGrad)"/>
 </svg>

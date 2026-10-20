@@ -52,10 +52,20 @@ export function Header() {
         {/* Logo */}
         <button type="button" onClick={() => onNavigate(route.home())} className="flex items-center gap-2.5 shrink-0 focus-ring rounded-lg" aria-label="EveryCalc home">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-hero-gradient shadow-glow">
-            <Calculator className="h-5 w-5 text-white" />
+            <svg viewBox="0 0 32 32" className="h-5 w-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="9" y="7" width="14" height="18" rx="2.5" fill="white"/>
+              <rect x="10.5" y="8.5" width="11" height="4" rx="1" fill="#1E1B4B"/>
+              <rect x="10.5" y="14" width="2.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+              <rect x="14" y="14" width="2.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+              <rect x="17.5" y="14" width="2.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+              <rect x="10.5" y="17.5" width="2.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+              <rect x="14" y="17.5" width="2.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+              <rect x="17.5" y="17.5" width="2.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+              <rect x="10.5" y="21" width="9.5" height="2.5" rx="0.6" fill="#D1D5DB"/>
+            </svg>
           </span>
           <span className="hidden font-bold text-lg tracking-tight sm:inline" style={{ fontFamily: "var(--font-display), serif" }}>
-            EveryCalc
+            Every Calculator
           </span>
         </button>
 

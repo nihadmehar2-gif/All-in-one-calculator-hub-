@@ -57,10 +57,14 @@ export const metadata: Metadata = {
     "math calculator", "percentage calculator", "compound interest",
     "statistics calculator", "geometry calculator", "EveryCalc",
   ],
-  authors: [{ name: "EveryCalc" }],
-  applicationName: "EveryCalc",
+  authors: [{ name: "Every Calculator" }],
+  applicationName: "Every Calculator",
   icons: {
-    icon: "/logo.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/logo.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.svg",
   },
   openGraph: {
     title: "Every Calculator — Free Online Calculators | All-in-One Calculator Hub",

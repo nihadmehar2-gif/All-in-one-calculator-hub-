@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     template: "%s — EveryCalc",
   },
   description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
   keywords: [
     "calculator", "calculators", "free calculator", "online calculator",
     "finance calculator", "loan calculator", "BMI", "unit converter",
@@ -86,7 +89,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="ZD9SdIXWF3yJhDc3HSp5Ti6QufX1rrttnUxM6AFeVSY" />
-        <link rel="canonical" href={SITE_URL} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,7 +112,7 @@ export default function RootLayout({
       >
         <noscript>
           <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto", fontFamily: "system-ui, sans-serif" }}>
-            <h1>EveryCalc — Every Calculator in One Place</h1>
+            <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.5rem" }}>EveryCalc — Every Calculator in One Place</h2>
             <p>EveryCalc is a free, open calculator platform with 224 calculators across 31 categories. All math runs locally in your browser — no tracking, no signups.</p>
             <h2>Categories</h2>
             <ul>

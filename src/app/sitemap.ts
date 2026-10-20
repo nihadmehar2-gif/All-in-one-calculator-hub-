@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
-import { getLiveCalculatorSlugs, getCategoryCountsData } from "@/lib/calculators/registry-data";
+import { getLiveCalculatorSlugs, getLiveCalculatorMeta, getCategoryCountsData } from "@/lib/calculators/registry-data";
 import { CATEGORIES_DATA } from "@/lib/calculators/categories-data";
+import { calculatorNameToSeoSlug, categoryUrlPath } from "@/lib/calculators/seo-urls";
 
 const SITE_URL = "https://nihad-calculator.vercel.app";
 
@@ -17,8 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const counts = getCategoryCountsData();
   for (const cat of CATEGORIES_DATA) {
     if ((counts[cat.id] ?? 0) > 0) {
+      const catSeo = categoryUrlPath(cat.id, cat.name).slice(1);
       entries.push({
-        url: `${SITE_URL}/category/${cat.id}`,
+        url: `${SITE_URL}/${catSeo}`,
         lastModified: now,
         changeFrequency: "weekly",
         priority: 0.8,
@@ -26,14 +28,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // All live calculator pages
+  // All live calculator pages with SEO-friendly URLs
   for (const slug of getLiveCalculatorSlugs()) {
-    entries.push({
-      url: `${SITE_URL}/calculator/${slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    });
+    const meta = getLiveCalculatorMeta(slug);
+    if (meta) {
+      const seoSlug = calculatorNameToSeoSlug(meta.name);
+      entries.push({
+        url: `${SITE_URL}/${seoSlug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
   }
 
   return entries;

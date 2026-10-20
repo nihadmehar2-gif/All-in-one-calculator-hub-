@@ -38,13 +38,13 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = "https://nihad-calculator.vercel.app";
 const SITE_DESCRIPTION =
-  "EveryCalc is a free, open calculator platform. 100% client-side math across 31 categories — finance, health, math, science, conversions and more. No tracking, no signups.";
+  "Every Calculator — your all-in-one calculator hub with 224 free online calculators across 31 categories. Finance, health, math, science, conversions and more. No tracking, no signups.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "EveryCalc — Every calculator in one place",
-    template: "%s — EveryCalc",
+    default: "Every Calculator — Free Online Calculators | All-in-One Calculator Hub",
+    template: "%s — Every Calculator",
   },
   description: SITE_DESCRIPTION,
   alternates: {
@@ -62,15 +62,15 @@ export const metadata: Metadata = {
     icon: "/logo.svg",
   },
   openGraph: {
-    title: "EveryCalc — Every calculator in one place",
+    title: "Every Calculator — Free Online Calculators | All-in-One Calculator Hub",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    siteName: "EveryCalc",
+    siteName: "Every Calculator",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EveryCalc",
+    title: "Every Calculator — Free Online Calculators",
     description: SITE_DESCRIPTION,
   },
   robots: {
@@ -95,7 +95,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "EveryCalc",
+              name: "Every Calculator",
               url: SITE_URL,
               description: SITE_DESCRIPTION,
               potentialAction: {
@@ -112,8 +112,8 @@ export default function RootLayout({
       >
         <noscript>
           <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto", fontFamily: "system-ui, sans-serif" }}>
-            <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.5rem" }}>EveryCalc — Every Calculator in One Place</h2>
-            <p>EveryCalc is a free, open calculator platform with 224 calculators across 31 categories. All math runs locally in your browser — no tracking, no signups.</p>
+            <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.5rem" }}>Every Calculator — Free Online Calculators</h2>
+            <p>Every Calculator is your all-in-one calculator hub with 224 free online calculators across 31 categories. All math runs locally in your browser — no tracking, no signups.</p>
             <h2>Categories</h2>
             <ul>
               <li>Basic Mathematics — percentage, average, fractions, GCD/LCM, scientific calculator</li>

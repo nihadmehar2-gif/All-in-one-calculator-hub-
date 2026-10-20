@@ -36,8 +36,8 @@ export default function Home() {
   const { segments, query } = router;
 
   useEffect(() => {
-    let title = "EveryCalc — Every calculator in one place";
-    let description = "EveryCalc is a free, open calculator platform with 200+ tools across 31 categories. All math runs locally in your browser — no tracking, no signups.";
+    let title = "Every Calculator — Free Online Calculators | All-in-One Calculator Hub";
+    let description = "Every Calculator — your all-in-one calculator hub with 224 free online calculators across 31 categories. Finance, health, math, science, conversions and more. No tracking, no signups.";
     let canonicalPath = "/";
     let jsonLdType: "website" | "calculator" | "webpage" | null = "website";
 
@@ -162,7 +162,7 @@ export default function Home() {
       };
       if (jsonLdType === "website") {
         jsonLd["@type"] = "WebSite";
-        jsonLd.name = "EveryCalc";
+        jsonLd.name = "Every Calculator";
         jsonLd.url = SITE_URL + "/";
         jsonLd.description = description;
         jsonLd.potentialAction = {

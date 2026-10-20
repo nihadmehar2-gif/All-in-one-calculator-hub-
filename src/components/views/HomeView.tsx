@@ -63,14 +63,15 @@ export function HomeView() {
           </Badge>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold max-w-3xl mx-auto" style={{ fontFamily: "var(--font-display), serif", letterSpacing: "-0.04em", lineHeight: 1.02 }}>
-            Every Calculation.
+            Every Calculator.
             <br />
             <span className="text-gradient italic font-medium">One Simple Place.</span>
           </h1>
 
           <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Free, fast, and private. All math runs locally in your browser — no signups,
-            no tracking, no API calls. From percentages to physics.
+            Your all-in-one calculator hub with {liveCount} free online calculators across {totalCategoriesWithCalc} categories.
+            All math runs locally in your browser — no signups, no tracking, no API calls.
+            From percentages to physics.
           </p>
 
           {/* Search */}

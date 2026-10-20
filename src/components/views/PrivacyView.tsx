@@ -60,19 +60,29 @@ export function PrivacyView() {
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground space-y-2">
           <p>
-            <strong>We do not currently run any analytics on EveryCalc.</strong> No Google
-            Analytics, no Plausible, no Mixpanel, no Hotjar, no Facebook Pixel — nothing.
+            <strong>We use Google Analytics 4 (GA4) to understand aggregate traffic patterns.</strong>
+            This helps us see which calculators are popular and improve the site. GA4 collects
+            anonymous, aggregate data such as page views, session duration, and approximate
+            geographic region (country/city level).
           </p>
           <p>
-            If we add privacy-friendly analytics in the future (e.g. a self-hosted, cookie-free
-            option that only counts aggregate page views), we will update this page and disclose
-            exactly what is collected. We will <strong>never</strong> add cross-site tracking
-            or advertising scripts.
+            <strong>What GA4 does NOT collect:</strong> Your calculator inputs, results, personal
+            information, email addresses, or any data you type into a calculator. All calculator
+            math runs entirely in your browser and is never sent to any server.
           </p>
           <p>
-            Our hosting provider (whoever serves the static HTML and JavaScript) may keep
-            standard server access logs (IP, user agent, request path) for security and abuse
-            prevention. Those logs are not shared with us in identifiable form.
+            GA4 may set cookies (&ldquo;_ga&rdquo;, &ldquo;_ga_&rdquo;) on your browser to distinguish
+            unique visitors. These cookies store a randomly generated anonymous ID — not your name,
+            email, or any personal information. You can opt out using browser cookie settings or
+            the Google Analytics opt-out browser add-on.
+          </p>
+          <p>
+            We do <strong>not</strong> use advertising scripts, cross-site tracking, Facebook Pixel,
+            or any third-party advertising network. GA4 is used solely for understanding site usage.
+          </p>
+          <p>
+            Our hosting provider (Vercel) may also keep standard server access logs (IP, user agent,
+            request path) for security and abuse prevention.
           </p>
         </CardContent>
       </Card>
@@ -86,12 +96,18 @@ export function PrivacyView() {
         </CardHeader>
         <CardContent className="text-sm text-muted-foreground space-y-2">
           <p>
-            <strong>EveryCalc does not set any cookies.</strong>
+            <strong>Google Analytics sets two cookies:</strong> &ldquo;_ga&rdquo; (2 years) and
+            &ldquo;_ga_&rdquo; (2 years) to distinguish unique visitors. These contain a randomly
+            generated anonymous ID — not your name, email, or any personal information.
           </p>
           <p>
-            We do use your browser&apos;s theme preference (light/dark/system) which is stored
+            We use your browser&apos;s theme preference (light/dark/system) which is stored
             by <code className="bg-muted px-1 py-0.5 rounded text-xs">next-themes</code> in
             localStorage. This stays on your device and is never sent to us.
+          </p>
+          <p>
+            No other cookies are set. You can block or delete GA4 cookies in your browser
+            settings without affecting calculator functionality.
           </p>
         </CardContent>
       </Card>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Fraunces, Sora, Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -110,6 +111,21 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${sora.variable} ${jakarta.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
+        {/* Google Analytics (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7ZZQ8MD3P5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7ZZQ8MD3P5', {
+              page_path: window.location.pathname + window.location.hash,
+            });
+          `}
+        </Script>
         <noscript>
           <div style={{ padding: "2rem", maxWidth: "800px", margin: "0 auto", fontFamily: "system-ui, sans-serif" }}>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.5rem" }}>Every Calculator — Free Online Calculators</h2>

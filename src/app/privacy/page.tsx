@@ -25,10 +25,10 @@ export default function PrivacyPage() {
       <p>All math runs entirely in your browser. When you type numbers into a calculator, they never leave your device. We do not transmit, log, or store your inputs or results on any server.</p>
 
       <h2>Analytics and Tracking</h2>
-      <p>We do not currently run any analytics on EveryCalc. No Google Analytics, no Plausible, no Mixpanel, no Hotjar, no Facebook Pixel — nothing.</p>
+      <p>We use Google Analytics 4 (GA4) to understand aggregate traffic patterns — page views, session duration, and approximate geographic region. GA4 does NOT collect your calculator inputs, results, or personal information. All calculator math runs entirely in your browser.</p>
 
       <h2>Cookies</h2>
-      <p>EveryCalc does not set any cookies. We use your browser&apos;s theme preference (light/dark) which is stored by next-themes in localStorage. This stays on your device.</p>
+      <p>Google Analytics sets two cookies (_ga and _ga_) containing a randomly generated anonymous ID — not your name or email. We also use your browser&apos;s theme preference (light/dark) stored in localStorage. You can block GA4 cookies in your browser settings without affecting calculator functionality.</p>
 
       <h2>Calculator Request Form</h2>
       <p>The request form does not submit data to a server. Clicking submit opens your email client with a pre-filled message. The content goes directly from your email provider to ours.</p>
